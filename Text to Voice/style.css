@@ -1,0 +1,137 @@
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;  /* H1 aur card ke beech space, easy! */
+    padding: 20px;  /* Sides pe thoda padding for mobile */
+}
+
+.hero h1 {
+    font-size: 3rem;  /* Bada aur bold */
+    font-weight: bold;
+    color: white;  /* Gradient pe white achha dikhega */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  /* Thoda shadow for depth */
+    margin: 0;  /* Default margin zero kar */
+    letter-spacing: 1px;  /* Spacing for modern look */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);  /* White with slight transparency for blend */
+    border-radius: 15px;  /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);  /* Nice shadow for pop */
+    padding: 30px;  /* Andar space */
+    max-width: 500px;  /* Width limit, center rahega */
+    width: 100%;
+    backdrop-filter: blur(10px);  /* Modern blur effect (modern browsers mein) */
+}
+
+#input-text {
+    width: 100%;
+    min-height: 150px;  /* Height for multi-line */
+    padding: 15px;
+    border: 2px solid #e0e0e0;  /* Light border */
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;  /* Clean font */
+    resize: vertical;  /* User height adjust kar sake */
+    box-sizing: border-box;  /* Padding include in width */
+    transition: border-color 0.3s ease;  /* Smooth focus */
+    margin-bottom: 20px;  /* Textarea ke baad row ke liye space */
+}
+
+#input-text:focus {
+    outline: none;
+    border-color: #4facfe;  /* Gradient color match on focus */
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);  /* Glow effect */
+}
+
+.row {
+    width: 100%;  /* Fixed 600px se change kiya, ab card mein fit hoga */
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* Thoda kam gap for tight fit */
+    flex-wrap: wrap;  /* Mobile pe agar chhota ho to wrap ho jayega */
+}
+
+button {
+    background: #ff2963;  /* Tera color same */
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 25px;  /* Thoda adjust for better look */
+    border-radius: 35px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Icon aur text center mein */
+    transition: background 0.3s ease, transform 0.2s ease;  /* Hover effect add kiya */
+    flex-shrink: 0;  /* Button shrink na ho */
+}
+
+button:hover {
+    background: #e0245a;  /* Hover pe darker shade */
+    transform: translateY(-2px);  /* Thoda upar uth jaye */
+}
+
+button img {
+    width: 16px;
+    margin-right: 8px;  /* Thoda kam margin for compact */
+    height: 16px;  /* Height bhi set for consistency */
+}
+
+select {
+    flex: 1;  /* Baaki space le le */
+    min-width: 120px;  /* Minimum width for small screens */
+    color: #fff;
+    background: #403d84;  /* Tera purple same */
+    height: 50px;
+    padding: 0 20px;
+    outline: 0;
+    border: 0;
+    border-radius: 35px;
+    appearance: none;
+    background-image: url(images/dropdown.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: calc(100% - 20px);
+    background-position-y: 18px;  /* Center align for height */
+    font-size: 16px;  /* Text size match button se */
+    cursor: pointer;
+    transition: background 0.3s ease;  /* Smooth change */
+}
+
+select:focus {
+    background: #352f6e;  /* Focus pe thoda darker */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 20px;
+        margin: 0 10px;
+    }
+
+    .row {
+        gap: 10px;  /* Mobile pe kam gap */
+    }
+
+    button {
+        padding: 10px 20px;  /* Chhota padding */
+        font-size: 14px;
+    }
+
+    select {
+        height: 45px;
+        padding: 0 15px;
+    }
+}
